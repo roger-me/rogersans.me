@@ -120,6 +120,19 @@ body {
     margin-top: 12px;
 }
 
+/* Inline Section Image */
+.section-image-inline {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    border-radius: 18px;
+}
+
+.section-image-inline:first-child {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
 /* Split Section Card */
 .section-card-split {
     display: flex;

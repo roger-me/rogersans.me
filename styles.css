@@ -133,6 +133,36 @@ body {
     margin-bottom: 16px;
 }
 
+/* Staggered Image Grid */
+.image-grid-staggered {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-top: 16px;
+}
+
+.image-grid-staggered img {
+    flex: 1;
+    width: 33.33%;
+    height: auto;
+    border-radius: 18px;
+}
+
+@media (max-width: 600px) {
+    .image-grid-staggered {
+        flex-direction: column;
+    }
+
+    .image-grid-staggered img {
+        width: 100%;
+    }
+
+    .image-grid-staggered img:nth-child(1),
+    .image-grid-staggered img:nth-child(3) {
+        margin: 0;
+    }
+}
+
 /* Split Section Card */
 .section-card-split {
     display: flex;
@@ -334,34 +364,39 @@ footer p {
 }
 
 .back-btn {
+    display: flex;
+    align-items: center;
+    height: 44px;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     color: var(--text);
     font-family: var(--font);
     font-size: 14px;
-    padding: 12px 20px;
+    padding: 0 20px;
     border-radius: 100px;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .back-btn:hover {
     background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
 .appstore-btn {
     display: flex;
     align-items: center;
     gap: 8px;
+    height: 44px;
     background: #fff;
     color: #000;
     font-family: var(--font);
     font-size: 14px;
     font-weight: 700;
-    padding: 12px 20px;
+    padding: 0 20px;
     border-radius: 100px;
     text-decoration: none;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .apple-logo {
@@ -371,12 +406,24 @@ footer p {
 }
 
 .appstore-btn:hover {
-    opacity: 0.8;
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
 .appstore-btn-bottom {
     width: fit-content;
     margin: 0 auto 48px auto;
+}
+
+.appstore-btn-riot {
+    background: #DF252C;
+    color: #fff;
+}
+
+.riot-logo {
+    height: 16px;
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
 .project-hero {

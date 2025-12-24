@@ -286,6 +286,13 @@ footer p {
 }
 
 /* Project Page Styles */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
 .back-btn {
     background: rgba(255, 255, 255, 0.1);
     border: none;
@@ -295,12 +302,41 @@ footer p {
     padding: 12px 20px;
     border-radius: 100px;
     cursor: pointer;
-    margin-bottom: 16px;
     transition: background 0.2s ease;
 }
 
 .back-btn:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+
+.appstore-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: #000;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.apple-logo {
+    height: 16px;
+    width: auto;
+    filter: brightness(0);
+}
+
+.appstore-btn:hover {
+    opacity: 0.8;
+}
+
+.appstore-btn-bottom {
+    width: fit-content;
+    margin: 0 auto 48px auto;
 }
 
 .project-hero {

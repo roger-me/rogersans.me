@@ -32,7 +32,7 @@ body {
 
 /* Header */
 .header {
-    margin-bottom: 48px;
+    margin-bottom: 16px;
 }
 
 .profile {
@@ -59,16 +59,27 @@ body {
     color: var(--text-secondary);
 }
 
-.description {
-    margin-top: 16px;
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.5;
+/* Section Cards */
+.section-card {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 16px;
 }
 
-/* Projects */
-.projects {
-    margin-bottom: 48px;
+.section-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 .project-list {
@@ -80,11 +91,12 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 16px 20px;
+    padding: 12px 16px;
+    margin: 0 -16px;
     font-size: 14px;
     color: var(--text);
     text-decoration: none;
-    border-radius: 24px;
+    border-radius: 100px;
     transition: all 0.2s ease;
 }
 
@@ -92,18 +104,39 @@ body {
     width: 20px;
     height: 20px;
     object-fit: contain;
+    transition: filter 0.2s ease;
 }
 
-.project-list a:hover {
-    background: rgba(255, 255, 255, 0.12);
-    padding-left: 28px;
+/* Project hover colors */
+.project-list li:nth-child(1) a:hover {
+    background: #fff;
+    color: #000;
+    padding-left: 24px;
+}
+
+.project-list li:nth-child(2) a:hover {
+    background: #E2FF8E;
+    color: #000;
+    padding-left: 24px;
+}
+
+.project-list li:nth-child(3) a:hover {
+    background: #D1A2FF;
+    color: #000;
+    padding-left: 24px;
+}
+
+.project-list li:nth-child(4) a:hover {
+    background: #FFD874;
+    color: #000;
+    padding-left: 24px;
+}
+
+.project-list a:hover .project-logo {
+    filter: brightness(0);
 }
 
 /* Contact */
-.contact {
-    margin-bottom: 48px;
-}
-
 .contact-form {
     display: flex;
     flex-direction: column;

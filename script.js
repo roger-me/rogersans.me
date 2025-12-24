@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Contact Form
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const formError = document.getElementById('formError');
@@ -71,4 +72,35 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Project Navigation
+    const projectLinks = document.querySelectorAll('[data-project]');
+    const pagesWrapper = document.querySelector('.pages-wrapper');
+
+    projectLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectId = link.dataset.project;
+            openProject(projectId);
+        });
+    });
 });
+
+function openProject(projectId) {
+    const pagesWrapper = document.querySelector('.pages-wrapper');
+    const projectPage = document.getElementById(`${projectId}-page`);
+
+    if (projectPage) {
+        pagesWrapper.classList.add('show-project');
+
+        // Scroll project page to top
+        setTimeout(() => {
+            projectPage.scrollTop = 0;
+        }, 50);
+    }
+}
+
+function closeProject() {
+    const pagesWrapper = document.querySelector('.pages-wrapper');
+    pagesWrapper.classList.remove('show-project');
+}

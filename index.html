@@ -3,63 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roger Sans - UX/UI Designer</title>
+    <title>Roger Sans - Product Designer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="profile">
-                <img src="profilepic.png" alt="Roger Sans" class="avatar">
-                <div class="info">
-                    <h1>Roger Sans</h1>
-                    <p>Product Designer</p>
-                </div>
+    <div class="pages-wrapper">
+        <!-- Homepage -->
+        <main class="page page-home">
+            <div class="container">
+                <!-- Header -->
+                <header class="header">
+                    <div class="profile">
+                        <img src="profilepic.png" alt="Roger Sans" class="avatar">
+                        <div class="info">
+                            <h1>Roger Sans</h1>
+                            <p>Product Designer</p>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- About -->
+                <section class="section-card">
+                    <h2 class="section-title">About me</h2>
+                    <p class="description">Hey! I'm a product designer with graphic design and motion graphics expertise focused on developing digital experiences in a creative and unique way. Inspired by the drive for innovation and the use of technology to improve processes.</p>
+                </section>
+
+                <!-- Projects -->
+                <section class="section-card">
+                    <h2 class="section-title">Projects</h2>
+                    <ul class="project-list">
+                        <li><a href="#" data-project="tiles"><img src="Assets/tiles.svg" alt="Tiles logo" class="project-logo">Tiles</a></li>
+                        <li><a href="#" data-project="studio"><img src="Assets/studio.svg" alt="Studio logo" class="project-logo">Studio</a></li>
+                        <li><a href="#" data-project="nuvix"><img src="Assets/nuvix.svg" alt="Nuvix logo" class="project-logo">Nuvix</a></li>
+                        <li><a href="#" data-project="lol"><img src="Assets/League-of-legends-seeklogo@2x.png" alt="League of Legends logo" class="project-logo">League of Legends</a></li>
+                    </ul>
+                </section>
+
+                <!-- Contact -->
+                <section class="section-card">
+                    <h2 class="section-title">Contact</h2>
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/roger.works@icloud.com" method="POST">
+                        <input type="hidden" name="_subject" value="New message from portfolio">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="name" placeholder="Name">
+                        <div class="input-with-icon">
+                            <span class="input-icon">@</span>
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <textarea name="message" placeholder="Message"></textarea>
+                        <p class="form-error" id="formError"></p>
+                        <button type="submit" id="submitBtn">Send</button>
+                    </form>
+                </section>
+
+                <footer>
+                    <p>&copy; 2026 Roger Sans</p>
+                </footer>
             </div>
-            </header>
+        </main>
 
-        <!-- About -->
-        <section class="section-card">
-            <h2 class="section-title">About me</h2>
-            <p class="description">Hey! I'm a product designer with graphic design and motion graphics expertise focused on developing digital experiences in a creative and unique way. Inspired by the drive for innovation and the use of technology to improve processes.</p>
-        </section>
+        <!-- Tiles Project Page -->
+        <div class="page page-project" id="tiles-page">
+            <div class="container">
+                <button class="back-btn" onclick="closeProject()">&larr; Back</button>
 
-        <!-- Projects -->
-        <section class="section-card">
-            <h2 class="section-title">Projects</h2>
-            <ul class="project-list">
-                <li><a href="#"><img src="Assets/tiles.svg" alt="Tiles logo" class="project-logo">Tiles</a></li>
-                <li><a href="#"><img src="Assets/studio.svg" alt="Studio logo" class="project-logo">Studio</a></li>
-                <li><a href="#"><img src="Assets/nuvix.svg" alt="Nuvix logo" class="project-logo">Nuvix</a></li>
-                <li><a href="#"><img src="Assets/League-of-legends-seeklogo@2x.png" alt="League of Legends logo" class="project-logo">League of Legends</a></li>
-            </ul>
-        </section>
+                <!-- Hero -->
+                <section class="section-card project-hero">
+                    <img src="Assets/tiles.svg" alt="Tiles" class="project-page-logo">
+                    <h1 class="project-page-title">Tiles</h1>
+                    <p class="project-page-subtitle">A location-based social network</p>
+                </section>
 
-        <!-- Contact -->
-        <section class="section-card">
-            <h2 class="section-title">Contact</h2>
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/roger.works@icloud.com" method="POST">
-                <input type="hidden" name="_subject" value="New message from portfolio">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="name" placeholder="Name">
-                <div class="input-with-icon">
-                    <span class="input-icon">@</span>
-                    <input type="email" name="email" placeholder="Email">
-                </div>
-                <textarea name="message" placeholder="Message"></textarea>
-                <p class="form-error" id="formError"></p>
-                <button type="submit" id="submitBtn">Send</button>
-            </form>
-        </section>
+                <!-- Banner -->
+                <section class="section-card">
+                    <img src="Assets/Tiles/tiles banner web.png" alt="Tiles Banner" class="project-image">
+                </section>
 
-        <footer>
-            <p>&copy; 2026 Roger Sans</p>
-        </footer>
-    </main>
+                <!-- Overview -->
+                <section class="section-card">
+                    <h2 class="section-title">Overview</h2>
+                    <p class="description">Tiles is a location-based social network that connects people through shared spaces. Users can discover, create, and interact with digital tiles placed in real-world locations, fostering community engagement and local discovery.</p>
+                </section>
+
+                <!-- Role -->
+                <section class="section-card">
+                    <h2 class="section-title">My Role</h2>
+                    <p class="description">Lead Product Designer responsible for the end-to-end design process, including user research, wireframing, prototyping, and final UI design. Collaborated closely with developers to ensure pixel-perfect implementation.</p>
+                </section>
+
+                <!-- Gallery -->
+                <section class="section-card">
+                    <h2 class="section-title">Design</h2>
+                    <div class="project-gallery">
+                        <img src="Assets/Tiles/1.png" alt="Tiles Screenshot 1" class="project-image">
+                        <img src="Assets/Tiles/2.png" alt="Tiles Screenshot 2" class="project-image">
+                        <img src="Assets/Tiles/3.png" alt="Tiles Screenshot 3" class="project-image">
+                        <img src="Assets/Tiles/4.png" alt="Tiles Screenshot 4" class="project-image">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

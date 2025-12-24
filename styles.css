@@ -53,7 +53,7 @@ body {
     transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease, padding 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.pages-wrapper.show-project .page-project {
+.page-project.active {
     width: 800px;
     padding: 0 24px;
     opacity: 1;
@@ -118,6 +118,33 @@ body {
 
 .description + .description {
     margin-top: 12px;
+}
+
+/* Split Section Card */
+.section-card-split {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.section-card-split .section-content {
+    flex: 1;
+}
+
+.section-card-split .section-image {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .section-card-split {
+        flex-direction: column;
+    }
+
+    .section-card-split .section-image {
+        width: 100%;
+    }
 }
 
 .project-list {
@@ -383,7 +410,7 @@ footer p {
         width: 600px;
     }
 
-    .pages-wrapper.show-project .page-project {
+    .page-project.active {
         width: 600px;
     }
 }
@@ -393,7 +420,7 @@ footer p {
         width: 500px;
     }
 
-    .pages-wrapper.show-project .page-project {
+    .page-project.active {
         width: 500px;
     }
 }
@@ -417,7 +444,7 @@ footer p {
         transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    .pages-wrapper.show-project .page-project {
+    .page-project.active {
         opacity: 1;
         transform: translateY(0);
         overflow-y: auto;

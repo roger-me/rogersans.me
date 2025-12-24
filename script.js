@@ -103,11 +103,18 @@ function openProject(projectId) {
             link.classList.remove('active');
         });
 
+        // Remove active from all project pages
+        document.querySelectorAll('.page-project').forEach(page => {
+            page.classList.remove('active');
+        });
+
         // Add active to clicked link
         if (projectLink) {
             projectLink.classList.add('active');
         }
 
+        // Add active to project page
+        projectPage.classList.add('active');
         pagesWrapper.classList.add('show-project');
 
         // Scroll project page to top
@@ -124,5 +131,10 @@ function closeProject() {
     // Remove active from all links
     document.querySelectorAll('[data-project]').forEach(link => {
         link.classList.remove('active');
+    });
+
+    // Remove active from all project pages
+    document.querySelectorAll('.page-project').forEach(page => {
+        page.classList.remove('active');
     });
 }

@@ -1,0 +1,173 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #000;
+    --text: #fff;
+    --text-secondary: #888;
+    --accent: #fff;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+/* Header */
+.header {
+    margin-bottom: 48px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.info p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.description {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Projects */
+.projects {
+    margin-bottom: 48px;
+}
+
+.project-list {
+    list-style: none;
+}
+
+
+.project-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 24px;
+    transition: all 0.2s ease;
+}
+
+.project-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.project-list a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    padding-left: 28px;
+}
+
+/* Contact */
+.contact {
+    margin-bottom: 48px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 14px;
+    font-family: var(--font);
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    border-radius: 24px;
+    color: var(--text);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font);
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.contact-form button:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Form Success */
+.form-success {
+    text-align: center;
+    padding: 24px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}

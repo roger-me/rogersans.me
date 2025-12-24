@@ -17,7 +17,7 @@
                 <img src="profilepic.png" alt="Roger Sans" class="avatar">
                 <div class="info">
                     <h1>Roger Sans</h1>
-                    <p>UX/UI Designer</p>
+                    <p>Product Designer</p>
                 </div>
             </div>
             </header>
@@ -42,11 +42,17 @@
         <!-- Contact -->
         <section class="section-card">
             <h2 class="section-title">Contact</h2>
-            <form class="contact-form" id="contactForm">
-                <input type="text" name="name" required placeholder="Name">
-                <input type="email" name="email" required placeholder="Email">
-                <textarea name="message" required placeholder="Message"></textarea>
-                <button type="submit">Send</button>
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/roger.works@icloud.com" method="POST">
+                <input type="hidden" name="_subject" value="New message from portfolio">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="name" placeholder="Name">
+                <div class="input-with-icon">
+                    <span class="input-icon">@</span>
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <textarea name="message" placeholder="Message"></textarea>
+                <p class="form-error" id="formError"></p>
+                <button type="submit" id="submitBtn">Send</button>
             </form>
         </section>
 

@@ -32,14 +32,24 @@ body {
     gap: 0;
     min-height: 100vh;
     height: 100vh;
+    overflow-y: auto;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pages-wrapper.show-project {
+    overflow: hidden;
 }
 
 .page-home {
     flex-shrink: 0;
     width: 800px;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     padding: 0 24px;
+}
+
+.pages-wrapper.show-project .page-home {
+    height: 100vh;
     overflow-y: auto;
 }
 
@@ -89,8 +99,36 @@ body {
 }
 
 .info p {
-    font-size: 24px;
+    font-size: 18px;
     color: var(--text-secondary);
+}
+
+.info {
+    flex: 1;
+}
+
+.linkedin-btn {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 2px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.linkedin-btn:hover {
+    transform: scale(1.15);
+}
+
+.linkedin-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s ease;
+}
+
+.linkedin-btn:hover .linkedin-icon {
+    filter: invert(37%) sepia(98%) saturate(1561%) hue-rotate(183deg) brightness(93%) contrast(96%);
 }
 
 /* Section Cards */
@@ -102,7 +140,7 @@ body {
 }
 
 .section-title {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--text-secondary);
     text-transform: uppercase;
@@ -192,9 +230,14 @@ body {
 
 .project-list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+    margin: 0 -16px;
+}
+
+.project-list li {
+    margin: 0;
 }
 
 
@@ -203,12 +246,17 @@ body {
     align-items: center;
     gap: 12px;
     padding: 12px 16px;
-    margin: 0 -16px;
     font-size: 14px;
     color: var(--text);
     text-decoration: none;
     border-radius: 100px;
     transition: all 0.2s ease;
+}
+
+@media (max-width: 500px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-logo {
@@ -262,12 +310,19 @@ body {
 }
 
 .experience-list li {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.experience-link {
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 12px 16px;
-    font-size: 14px;
+    text-decoration: none;
     color: var(--text);
+    border-radius: 18px;
+    transition: all 0.2s ease;
 }
 
 .experience-list li:nth-child(1),
@@ -311,6 +366,96 @@ body {
     background: rgba(255, 255, 255, 0.1);
     padding: 4px 10px;
     border-radius: 100px;
+    transition: all 0.2s ease;
+}
+
+/* Experience hover colors */
+.experience-tiles:hover,
+.experience-innova:hover {
+    background: #fff;
+    padding-left: 24px;
+}
+
+.experience-tiles:hover .experience-name,
+.experience-tiles:hover .experience-role,
+.experience-innova:hover .experience-name,
+.experience-innova:hover .experience-role {
+    color: #000;
+}
+
+.experience-tiles:hover .experience-logo,
+.experience-innova:hover .experience-logo {
+    filter: brightness(0);
+}
+
+.experience-tiles:hover .experience-date,
+.experience-innova:hover .experience-date {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.experience-antler:hover {
+    background: #FF303C;
+    padding-left: 24px;
+}
+
+.experience-antler:hover .experience-name,
+.experience-antler:hover .experience-role {
+    color: #fff;
+}
+
+.experience-antler:hover .experience-date {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.experience-studio:hover {
+    background: #E2FF8E;
+    padding-left: 24px;
+}
+
+.experience-studio:hover .experience-name,
+.experience-studio:hover .experience-role {
+    color: #000;
+}
+
+.experience-studio:hover .experience-logo {
+    filter: brightness(0);
+}
+
+.experience-studio:hover .experience-date {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.experience-mobyfox:hover {
+    background: #00BDA8;
+    padding-left: 24px;
+}
+
+.experience-mobyfox:hover .experience-name,
+.experience-mobyfox:hover .experience-role {
+    color: #fff;
+}
+
+.experience-mobyfox:hover .experience-date {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.experience-webtvasia:hover {
+    background: #FF0000;
+    padding-left: 24px;
+}
+
+.experience-webtvasia:hover .experience-name,
+.experience-webtvasia:hover .experience-role {
+    color: #fff;
+}
+
+.experience-webtvasia:hover .experience-date {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
 /* Contact */

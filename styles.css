@@ -29,7 +29,7 @@ body {
 .pages-wrapper {
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 0;
     min-height: 100vh;
     height: 100vh;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -112,12 +112,19 @@ body {
 
 .description {
     font-size: 14px;
-    color: var(--text-secondary);
+    color: var(--text);
     line-height: 1.6;
+}
+
+.description + .description {
+    margin-top: 12px;
 }
 
 .project-list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 
@@ -142,31 +149,36 @@ body {
 }
 
 /* Project hover colors */
-.project-list li:nth-child(1) a:hover {
+.project-list li:nth-child(1) a:hover,
+.project-list li:nth-child(1) a.active {
     background: #fff;
     color: #000;
     padding-left: 24px;
 }
 
-.project-list li:nth-child(2) a:hover {
+.project-list li:nth-child(2) a:hover,
+.project-list li:nth-child(2) a.active {
     background: #E2FF8E;
     color: #000;
     padding-left: 24px;
 }
 
-.project-list li:nth-child(3) a:hover {
+.project-list li:nth-child(3) a:hover,
+.project-list li:nth-child(3) a.active {
     background: #D1A2FF;
     color: #000;
     padding-left: 24px;
 }
 
-.project-list li:nth-child(4) a:hover {
+.project-list li:nth-child(4) a:hover,
+.project-list li:nth-child(4) a.active {
     background: #FFD874;
     color: #000;
     padding-left: 24px;
 }
 
-.project-list a:hover .project-logo {
+.project-list a:hover .project-logo,
+.project-list a.active .project-logo {
     filter: brightness(0);
 }
 
@@ -283,7 +295,7 @@ footer p {
     padding: 12px 20px;
     border-radius: 100px;
     cursor: pointer;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     transition: background 0.2s ease;
 }
 
@@ -311,6 +323,12 @@ footer p {
 .project-page-subtitle {
     font-size: 16px;
     color: var(--text-secondary);
+}
+
+.project-banner {
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 16px;
 }
 
 .project-image {

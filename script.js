@@ -89,8 +89,25 @@ document.addEventListener('DOMContentLoaded', () => {
 function openProject(projectId) {
     const pagesWrapper = document.querySelector('.pages-wrapper');
     const projectPage = document.getElementById(`${projectId}-page`);
+    const projectLink = document.querySelector(`[data-project="${projectId}"]`);
+
+    // If clicking on already active project, close it
+    if (projectLink && projectLink.classList.contains('active')) {
+        closeProject();
+        return;
+    }
 
     if (projectPage) {
+        // Remove active from all links
+        document.querySelectorAll('[data-project]').forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add active to clicked link
+        if (projectLink) {
+            projectLink.classList.add('active');
+        }
+
         pagesWrapper.classList.add('show-project');
 
         // Scroll project page to top
@@ -103,4 +120,9 @@ function openProject(projectId) {
 function closeProject() {
     const pagesWrapper = document.querySelector('.pages-wrapper');
     pagesWrapper.classList.remove('show-project');
+
+    // Remove active from all links
+    document.querySelectorAll('[data-project]').forEach(link => {
+        link.classList.remove('active');
+    });
 }

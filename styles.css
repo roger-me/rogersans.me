@@ -884,6 +884,11 @@ footer p {
         overflow-y: auto;
         pointer-events: auto;
         -webkit-overflow-scrolling: touch;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .page-project .container {
+        padding-bottom: 24px;
     }
 
     .project-gallery {

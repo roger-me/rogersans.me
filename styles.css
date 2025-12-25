@@ -879,13 +879,13 @@ footer p {
 
     .page-project {
         position: fixed;
-        top: 12px;
+        top: 8px;
         left: 8px;
         right: 8px;
-        bottom: 0;
+        bottom: 8px;
         z-index: 100;
         background: var(--bg);
-        border-radius: 34px 34px 0 0;
+        border-radius: 34px;
         padding: 0;
         opacity: 0;
         transform: translateY(100%);
@@ -895,7 +895,7 @@ footer p {
         -webkit-overflow-scrolling: touch;
         overscroll-behavior: contain;
         transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
-        box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     }
 
     .page-project.active {
@@ -905,7 +905,8 @@ footer p {
     }
 
     .page-project .container {
-        padding: 24px 24px calc(48px + env(safe-area-inset-bottom, 20px)) 24px;
+        padding: 24px;
+        padding-bottom: calc(24px + env(safe-area-inset-bottom, 8px));
         min-height: 100%;
     }
 

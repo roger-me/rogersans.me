@@ -698,8 +698,14 @@ footer p {
     font-size: 16px;
     padding: 0 20px;
     border-radius: 100px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-text-mobile {
+    display: none;
+}
+
+.btn-text-desktop {
+    display: inline;
 }
 
 .back-btn:hover {
@@ -905,6 +911,14 @@ footer p {
 
     .project-gallery {
         grid-template-columns: 1fr;
+    }
+
+    .btn-text-desktop {
+        display: none;
+    }
+
+    .btn-text-mobile {
+        display: inline;
     }
 }
 

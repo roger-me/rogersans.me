@@ -879,10 +879,10 @@ footer p {
 
     .page-project {
         position: fixed;
-        top: 8px;
-        left: 8px;
-        right: 8px;
-        bottom: 8px;
+        top: 60px;
+        left: 12px;
+        right: 12px;
+        bottom: calc(12px + env(safe-area-inset-bottom, 80px));
         z-index: 100;
         background: var(--bg);
         border-radius: 34px;
@@ -905,9 +905,16 @@ footer p {
     }
 
     .page-project .container {
-        padding: 24px;
-        padding-bottom: calc(24px + env(safe-area-inset-bottom, 8px));
+        padding: 24px 20px;
         min-height: 100%;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .page-project img {
+        max-width: 100%;
+        height: auto;
     }
 
     .project-gallery {

@@ -881,13 +881,12 @@ footer p {
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100% !important;
-        height: 100% !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
         z-index: 100;
         background: var(--bg);
-        padding: 0 24px !important;
+        padding: 0 !important;
         opacity: 0;
         transform: translateY(20px);
         pointer-events: none;
@@ -898,15 +897,15 @@ footer p {
     .page-project.active {
         opacity: 1;
         transform: translateY(0);
-        overflow-y: scroll !important;
+        overflow-y: auto !important;
         overflow-x: hidden;
         pointer-events: auto;
         -webkit-overflow-scrolling: touch;
-        padding-bottom: env(safe-area-inset-bottom);
     }
 
     .page-project .container {
-        padding-bottom: 24px;
+        padding: 48px 24px;
+        padding-bottom: calc(48px + env(safe-area-inset-bottom));
     }
 
     .project-gallery {

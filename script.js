@@ -45,12 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-                if (response.ok) {
+                const data = await response.json();
+
+                if (data.success) {
                     submitBtn.innerHTML = '&#10003; Message sent, thank you!';
                     submitBtn.classList.add('submit-btn-success');
                     form.reset();
                 } else {
-                    throw new Error('Failed to send');
+                    throw new Error(data.message || 'Failed to send');
                 }
             } catch (error) {
                 formError.textContent = 'Failed to send. Please try again.';

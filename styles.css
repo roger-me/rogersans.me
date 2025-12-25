@@ -877,17 +877,19 @@ footer p {
         overflow-y: visible;
     }
 
-    .page-project {
-        position: fixed;
-        top: 60px;
-        left: 16px;
-        right: 16px;
-        bottom: 120px;
-        width: auto !important;
+    .page-project,
+    .page-project.active {
+        position: fixed !important;
+        top: 60px !important;
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 160px !important;
+        width: calc(100% - 32px) !important;
+        height: auto !important;
         z-index: 100;
         background: var(--bg);
         border-radius: 34px;
-        padding: 0;
+        padding: 0 !important;
         opacity: 0;
         transform: translateY(100%);
         pointer-events: none;
@@ -900,9 +902,9 @@ footer p {
     }
 
     .page-project.active {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        pointer-events: auto !important;
     }
 
     .page-project .container {

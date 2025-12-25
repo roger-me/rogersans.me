@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function openProject(projectId) {
+function openProject(projectId, updateHistory = true) {
     const pagesWrapper = document.querySelector('.pages-wrapper');
     const projectPage = document.getElementById(`${projectId}-page`);
     const projectLink = document.querySelector(`[data-project="${projectId}"]`);
@@ -126,6 +126,11 @@ function openProject(projectId) {
         projectPage.classList.add('active');
         pagesWrapper.classList.add('show-project');
 
+        // Update URL
+        if (updateHistory) {
+            history.pushState({ project: projectId }, '', `/${projectId}`);
+        }
+
         // Scroll project page to top
         setTimeout(() => {
             projectPage.scrollTop = 0;
@@ -133,7 +138,7 @@ function openProject(projectId) {
     }
 }
 
-function closeProject() {
+function closeProject(updateHistory = true) {
     const pagesWrapper = document.querySelector('.pages-wrapper');
     pagesWrapper.classList.remove('show-project');
 
@@ -141,6 +146,11 @@ function closeProject() {
     document.querySelectorAll('[data-project]').forEach(link => {
         link.classList.remove('active');
     });
+
+    // Update URL
+    if (updateHistory) {
+        history.pushState({}, '', '/');
+    }
 
     // Remove active from all project pages
     document.querySelectorAll('.page-project').forEach(page => {
@@ -193,4 +203,19 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('themeMenu').classList.remove('active');
         }
     });
+
+    // Handle URL on page load
+    const path = window.location.pathname.replace('/', '');
+    if (path && document.getElementById(`${path}-page`)) {
+        openProject(path, false);
+    }
+});
+
+// Handle browser back/forward
+window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.project) {
+        openProject(e.state.project, false);
+    } else {
+        closeProject(false);
+    }
 });

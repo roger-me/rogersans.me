@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger Sans - Product Designer</title>
+    <meta name="description" content="Product designer with graphic design and motion graphics expertise focused on developing digital experiences in a creative and unique way.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roger Sans - Product Designer">
+    <meta property="og:description" content="Product designer with graphic design and motion graphics expertise focused on developing digital experiences in a creative and unique way.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Roger Sans - Product Designer">
+    <meta name="twitter:description" content="Product designer with graphic design and motion graphics expertise focused on developing digital experiences in a creative and unique way.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pages-wrapper">
+        <!-- Homepage -->
+        <main class="page page-home">
+            <div class="container">
+                <!-- Header -->
+                <header class="header">
+                    <div class="profile">
+                        <img src="profilepic.png" alt="Roger Sans" class="avatar">
+                        <div class="info">
+                            <h1>Roger Sans</h1>
+                            <p>Product Designer</p>
+                        </div>
+                        <a href="https://linkedin.com/in/rogersr96" target="_blank" class="linkedin-btn">
+                            <img src="Assets/logos/LinkedinLogo.svg" alt="LinkedIn" class="linkedin-icon">
+                        </a>
+                        <div class="theme-switcher">
+                            <button class="theme-btn" onclick="toggleThemeMenu()">
+                                <img src="Assets/logos/Palette.svg" alt="Theme" class="theme-icon">
+                            </button>
+                            <div class="theme-menu" id="themeMenu">
+                                <button class="theme-option" data-theme="light">
+                                    <span class="theme-color" style="background: #fff; border: 1px solid #ddd;"></span>
+                                    Light
+                                </button>
+                                <button class="theme-option" data-theme="dark">
+                                    <span class="theme-color" style="background: #000;"></span>
+                                    Dark
+                                </button>
+                                <button class="theme-option" data-theme="nord">
+                                    <span class="theme-color" style="background: #88C0D0;"></span>
+                                    Nord
+                                </button>
+                                <button class="theme-option" data-theme="dracula">
+                                    <span class="theme-color" style="background: #BD93F9;"></span>
+                                    Dracula
+                                </button>
+                                <button class="theme-option" data-theme="cyber">
+                                    <span class="theme-color" style="background: #FFE135;"></span>
+                                    Cyber
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- About -->
+                <section class="section-card">
+                    <h2 class="section-title">About me</h2>
+                    <p class="description">Hey! I'm a product designer with graphic design and motion graphics expertise focused on developing digital experiences in a creative and unique way. Inspired by the drive for innovation and the use of technology to improve processes.</p>
+                </section>
+
+                <!-- Projects -->
+                <section class="section-card">
+                    <h2 class="section-title">Projects</h2>
+                    <ul class="project-list">
+                        <li><a href="#" data-project="tiles"><img src="Assets/tiles.svg" alt="Tiles logo" class="project-logo">Tiles</a></li>
+                        <li><a href="#" data-project="studio"><img src="Assets/studio.svg" alt="Studio logo" class="project-logo">Studio</a></li>
+                        <li><a href="#" data-project="nuvix"><img src="Assets/nuvix.svg" alt="Nuvix logo" class="project-logo">Nuvix</a></li>
+                        <li><a href="#" data-project="lol"><img src="Assets/League-of-legends-seeklogo@2x.png" alt="League of Legends logo" class="project-logo">League of Legends</a></li>
+                    </ul>
+                </section>
+
+                <!-- Work Experience -->
+                <section class="section-card">
+                    <h2 class="section-title">Experience</h2>
+                    <ul class="experience-list">
+                        <li>
+                            <a href="https://thetiles.app" target="_blank" class="experience-link experience-tiles">
+                                <img src="Assets/tiles.svg" alt="Tiles logo" class="experience-logo">
+                                <div class="experience-info">
+                                    <span class="experience-name">Tiles</span>
+                                    <span class="experience-role">Solo project</span>
+                                </div>
+                                <span class="experience-date">2025</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.antler.co" target="_blank" class="experience-link experience-antler">
+                                <img src="Assets/logos/antler logo.svg" alt="Antler logo" class="experience-logo">
+                                <div class="experience-info">
+                                    <span class="experience-name">Antler</span>
+                                    <span class="experience-role">Entrepreneur in Residence</span>
+                                </div>
+                                <span class="experience-date">2025</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://studioapp.co" target="_blank" class="experience-link experience-studio">
+                                <img src="Assets/studio.svg" alt="Studio logo" class="experience-logo">
+                                <div class="experience-info">
+                                    <span class="experience-name">Studio</span>
+                                    <span class="experience-role">Product Designer</span>
+                                </div>
+                                <span class="experience-date">2024/25</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/_innova_group" target="_blank" class="experience-link experience-innova">
+                                <img src="Assets/logos/Dcropped-IMAGOTIPO-NEGRO@3x-2048x542.png" alt="Innova Group logo" class="experience-logo">
+                                <div class="experience-info">
+                                    <span class="experience-name">Innova Group</span>
+                                    <span class="experience-role">Product / Digital Designer</span>
+                                </div>
+                                <span class="experience-date">2024</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/mobyfox" target="_blank" class="experience-link experience-mobyfox">
+                                <img src="Assets/logos/LOGO ALT_BLACK.png" alt="MobyFox logo" class="experience-logo">
+                                <div class="experience-info">
+                                    <span class="experience-name">MobyFox</span>
+                                    <span class="experience-role">Product / Digital Designer</span>
+                                </div>
+                                <span class="experience-date">2021/23</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://webtvasia.com" target="_blank" class="experience-link experience-webtvasia">
+                                <img src="Assets/logos/Logo-wtva (1).png" alt="WebTVAsia logo" class="experience-logo">
+                                <div class="experience-info">
+                                    <span class="experience-name">WebTVAsia</span>
+                                    <span class="experience-role">Digital Content Creator</span>
+                                </div>
+                                <span class="experience-date">2020/22</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Contact -->
+                <section class="section-card">
+                    <h2 class="section-title">Contact</h2>
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="45303619-810e-47a7-b3c5-6de49193da18">
+                        <input type="hidden" name="subject" value="New message from portfolio">
+                        <input type="text" name="name" placeholder="Name">
+                        <div class="input-with-icon">
+                            <span class="input-icon">@</span>
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <textarea name="message" placeholder="Message"></textarea>
+                        <p class="form-error" id="formError"></p>
+                        <button type="submit" id="submitBtn">Send</button>
+                    </form>
+                </section>
+
+                <footer>
+                    <p>&copy; 2026 Roger Sans</p>
+                </footer>
+            </div>
+        </main>
+
+        <!-- Tiles Project Page -->
+        <div class="page page-project" id="tiles-page">
+            <div class="container">
+                <div class="project-header">
+                    <button class="back-btn" onclick="closeProject()"><span class="btn-text-desktop">Close</span><span class="btn-text-mobile">Back</span></button>
+                    <a href="https://apps.apple.com/us/app/tiles-unlock-your-world/id6753957721" target="_blank" class="appstore-btn"><img src="Assets/Apple_logo_white.png" alt="Apple" class="apple-logo">Download Tiles</a>
+                </div>
+
+                <!-- Banner -->
+                <img src="Assets/Tiles/tiles banner web.png" alt="Tiles Banner" class="project-banner">
+
+                <!-- Overview -->
+                <section class="section-card">
+                    <h2 class="section-title">Overview</h2>
+                    <p class="description">Tiles is a location-based exploration app that turns the world into a grid of hexagons. Each tile represents a real place that can be discovered, unlocked, and remembered through pins made with photos or/and notes. Also, it can be shared with other friends around the world and reply to that specific pin with your own media.</p>
+                    <p class="description">I created Tiles from concept and UX research to the final iOS prototype built with Xcode, using Mapbox as a map provider and CloudKit as a backend.</p>
+                    <p class="description">The project started as a personal idea and later grew into a startup concept during my participation in the <strong>Antler entrepreneurship program in Copenhagen</strong>, where I developed its early vision and product foundation.</p>
+                </section>
+
+                <img src="Assets/Tiles/1.png" alt="Tiles Feature" class="project-banner">
+
+                <section class="section-card">
+                    <h2 class="section-title">Identifying the core problems</h2>
+                    <p class="description">Most map apps are built for navigation, not discovery. They show you where to go, but not what's interesting around you or what stories others have experienced there. I wanted to create something that captures curiosity and connection through real places.</p>
+                </section>
+
+                <section class="section-card">
+                    <h2 class="section-title">Solution</h2>
+                    <p class="description">Tiles reimagines exploration as a creative experience. The map is divided into hexagonal tiles you can unlock by visiting them. Inside each tile, users can leave Pins contained with photos or notes that capture a moment. Your friends can also post Pins, making the map a shared memory space.</p>
+                    <p class="description">It's not about likes or followers, but about personal discovery and shared experiences. When you open the map, you see your story layered over the real world.</p>
+                </section>
+
+                <img src="Assets/Tiles/2.png" alt="Tiles Feature" class="project-banner">
+
+                <!-- Role -->
+                <section class="section-card">
+                    <h2 class="section-title">My Role</h2>
+                    <p class="description">This was a full solo project, I worked on:</p>
+                    <p class="description">• Concept, research and product design<br>• UX and UI in Figma<br>• Visual identity and design system<br>• iOS implementation in Xcode using Swift, Mapbox, and CloudKit<br>• Testing and iteration based on user feedback</p>
+                    <p class="description">Doing everything myself gave me full control over every detail, from how the app feels when you open it to how data syncs in the background.</p>
+                </section>
+
+                <img src="Assets/Tiles/3.png" alt="Tiles Feature" class="project-banner">
+
+                <section class="section-card">
+                    <h2 class="section-title">Design Approach</h2>
+                    <p class="description">I built Tiles using Apple's new visual style from iOS 26. The interface uses minimal controls that doesn't interfere with the map. The experience is calm and immersive, focused on the feeling of exploring rather than consuming content.</p>
+                    <p class="description">Each type of Pin is designed to blend naturally into the world view. The quick toolbar and context menus keep navigation fluid and always keeping the focus on the most important thing, the map, so you can capture a moment with one tap.</p>
+                </section>
+
+                <img src="Assets/Tiles/4.png" alt="Tiles Feature" class="project-banner">
+
+                <section class="section-card">
+                    <h2 class="section-title">Outcome</h2>
+                    <p class="description">Tiles is now a functional iOS prototype with:</p>
+                    <p class="description">• A full Mapbox-based map engine<br>• CloudKit integration for users, pins, and friend pins<br>• Glass-effect quick toolbars and contextual actions<br>• A feed that connects map activity with shared moments</p>
+                    <p class="description">It's currently being tested with early users on Testflight, and I'm continuing to refine both UX and performance.</p>
+                </section>
+
+                <div class="project-header">
+                    <button class="back-btn" onclick="closeProject()"><span class="btn-text-desktop">Close</span><span class="btn-text-mobile">Back</span></button>
+                    <a href="https://apps.apple.com/us/app/tiles-unlock-your-world/id6753957721" target="_blank" class="appstore-btn"><img src="Assets/Apple_logo_white.png" alt="Apple" class="apple-logo">Download Tiles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Studio Project Page -->
+        <div class="page page-project" id="studio-page">
+            <div class="container">
+                <div class="project-header">
+                    <button class="back-btn" onclick="closeProject()"><span class="btn-text-desktop">Close</span><span class="btn-text-mobile">Back</span></button>
+                    <a href="https://studioapp.co" target="_blank" class="appstore-btn">Visit Studioapp</a>
+                </div>
+
+                <!-- Banner -->
+                <img src="Assets/Studio/LjnIlhpMh1pSpwCW8HZydLrCm5U.png.webp" alt="Studio Banner" class="project-banner">
+
+                <!-- Context -->
+                <section class="section-card">
+                    <h2 class="section-title">Context</h2>
+                    <p class="description">Tattoo and piercing studios in Spain face significant operational challenges, with more than 3,800 studios, over 80% of which still rely on paper-based systems. Among the most repetitive and legally mandatory tasks is the signing of informed consent forms, which outline health risks associated with tattoos and piercings. This process is time-consuming, averaging 15 minutes per client, and studios often only have forms available in Spanish, creating barriers for non-Spanish-speaking clients.</p>
+                    <p class="description">Additionally, managing appointments, inventory, and invoicing manually results in inefficiencies that cost studios time and revenue. These operational bottlenecks hinder productivity and fail to meet the growing expectations of modern customers.</p>
+                </section>
+
+                <!-- The Process -->
+                <section class="section-card">
+                    <h2 class="section-title">The Process</h2>
+                    <p class="description">The team followed a structured approach to deeply understand the pain points faced by tattoo studios and implement features to streamline their operations.</p>
+                </section>
+
+                <!-- Identifying the core problems -->
+                <section class="section-card section-card-split">
+                    <div class="section-content">
+                        <h2 class="section-title">Identifying the core problems</h2>
+                        <p class="description">The key operational issues were:</p>
+                        <p class="description">• Time-Consuming Consent Forms: Manual processes averaged 15 minutes per signature, delaying workflows.<br>• Language Barriers: Non-Spanish-speaking clients struggled with forms, often leading to misunderstandings or delays.<br>• Inefficient Organization: Studios lacked systems for managing appointments, inventory, and financial operations effectively.</p>
+                    </div>
+                    <img src="Assets/Studio/NKTJVx7HLYTE48RIBhriYXIFo.png.webp" alt="Studio Feature" class="section-image">
+                </section>
+
+                <!-- Understanding the industry -->
+                <section class="section-card">
+                    <h2 class="section-title">Understanding the industry</h2>
+                    <p class="description">To ensure the solution met real-world needs, the team engaged tattoo studios in Spain to uncover their daily frustrations and operational gaps. Feedback from studio owners and artists was key in defining the app's features.</p>
+                </section>
+
+                <!-- Feature Design -->
+                <section class="section-card">
+                    <h2 class="section-title">Feature Design and Prioritization</h2>
+                    <p class="description">Using insights from their research, the team prioritized features that would address the most pressing issues while improving efficiency and compliance.</p>
+                </section>
+
+                <!-- Solution -->
+                <section class="section-card section-card-split">
+                    <div class="section-content">
+                        <h2 class="section-title">Solution</h2>
+                        <p class="description">STUDIOAPP delivered a comprehensive, user-friendly solution to digitize and automate the daily tasks of tattoo studios:</p>
+                        <p class="description"><strong>Shared Team Calendar</strong><br>• Google Calendar Integration: Enables tattoo artists to manage their schedules seamlessly.<br>• Automated Appointment Reminders: Notifications sent via WhatsApp reduce no-shows and improve client communication.</p>
+                    </div>
+                    <img src="Assets/Studio/UEm6WBvg2bW8proaTEjCCYXz44.png.webp" alt="Studio Calendar" class="section-image">
+                </section>
+
+                <section class="section-card">
+                    <h2 class="section-title">More Features</h2>
+                    <p class="description"><strong>Digitalized Consent Signing</strong><br>• QR Code Process: Clients scan a QR code to access and sign consent forms on their mobile phones in under 2 minutes, reducing signature time by over 80%.<br>• Multilingual Support: Forms are available in multiple languages, addressing the needs of international clients and improving accessibility.<br>• Secure Storage: Signed forms are digitally stored and easily accessible, ensuring compliance with legal and organizational requirements.</p>
+                    <p class="description"><strong>Inventory Management</strong><br>• Real-Time Stock Tracking: Helps studios monitor and manage supplies efficiently.</p>
+                    <p class="description"><strong>Automated Invoicing and Billing</strong><br>• Simplifies financial operations, reducing errors and freeing up time for creative tasks.</p>
+                </section>
+
+                <!-- Results and Impact -->
+                <section class="section-card">
+                    <h2 class="section-title">Results and Impact</h2>
+                    <p class="description">The implementation of STUDIOAPP led to transformative results:</p>
+                    <p class="description">• Efficiency Gains: Reduced consent form signing time from 15 minutes to 2 minutes, saving significant time for studios and clients.<br>• Daily Adoption: The app now manages over 250 consent signatures daily across its user base.<br>• Widespread Use: Over 80 tattoo studios and 600 artists in Spain actively use the app to streamline their operations.<br>• Revenue Growth: Achieved $20,000 Annual Recurring Revenue (ARR) in the first year.<br>• Enhanced Client Experience: Multilingual support and automated reminders increased customer satisfaction and retention.</p>
+                </section>
+
+                <!-- Key Learning -->
+                <section class="section-card">
+                    <h2 class="section-title">Key Learning and Collaboration</h2>
+                    <p class="description">The success of STUDIOAPP highlights the importance of understanding user needs, designing with empathy, and fostering collaboration.</p>
+                    <p class="description">• Empathy in Design: The team prioritized features that addressed real pain points, ensuring a meaningful impact on studio operations.<br>• Continuous Discovery: Feedback loops with users allowed the team to refine and expand features post-launch.</p>
+                </section>
+
+                <div class="project-header">
+                    <button class="back-btn" onclick="closeProject()"><span class="btn-text-desktop">Close</span><span class="btn-text-mobile">Back</span></button>
+                    <a href="https://studioapp.co" target="_blank" class="appstore-btn">Visit Studioapp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nuvix Project Page -->
+        <div class="page page-project" id="nuvix-page">
+            <div class="container">
+                <div class="project-header">
+                    <button class="back-btn" onclick="closeProject()"><span class="btn-text-desktop">Close</span><span class="btn-text-mobile">Back</span></button>
+                </div>
+
+                <!-- Banner -->
+                <img src="Assets/Nuvix/qAzCbptq5mj344h4bSzbyzwf8UY.png.webp" alt="Nuvix Banner" class="project-banner">
+
+                <!-- Context -->
+                <section class="section-card">
+                    <h2 class="section-title">Context</h2>
+                    <p class="description">This project involves the development of an AI-powered news podcast platform designed to deliver daily, personalized news summaries. The platform aggregates content from a variety of trusted sources, curating the most relevant news based on user preferences.</p>
+                    <p class="description">Through an intuitive interface, users can stay up to date with the latest developments in their favorite topics, all delivered in an engaging, audio format. The goal is to provide a streamlined and efficient news experience, allowing users to access the information that matters most to them, anytime and anywhere.</p>
+                </section>
+
+                <!-- Users -->
+                <section class="section-card">
+                    <h2 class="section-title">Users</h2>
+                    <p class="description">Focused on busy users, commuters, and those seeking hands-free, personalized updates, offering an intuitive and inclusive experience.</p>
+                    <p class="description"><strong>Target Audience:</strong><br>• Commuters & Multitaskers: Hands-free news on the go.<br>• Accessibility Users: Convenient for visual impairments.<br>• News Enthusiasts: Easy access to personalized updates.<br>• Seniors & Tech Beginners: Simple, user-friendly design.<br>• Students & Academics: Efficient content consumption.<br>• Tech Enthusiasts: Exploring AI-driven solutions.</p>
+                </section>
+
+                <!-- Problem -->
+                <section class="section-card">
+                    <h2 class="section-title">Problem</h2>
+                    <p class="description">• Staying informed on preferred topics during busy schedules requires more phone use, leading to distractions.<br>• Finding trustworthy sources and quality articles is time-consuming and inefficient.<br>• These challenges make it harder to stay updated without compromising focus and productivity.<br>• Users spend an average of 4 hours and 30 minutes daily consuming content, impacting productivity and quality time.</p>
+                </section>
+
+                <!-- Solution -->
+                <section class="section-card">
+                    <h2 class="section-title">Solution</h2>
+                    <p class="description">• Trustworthy Sources: Curates reliable news outlets for credible information.<br>• Personalized Topics: Focuses on user preferences to save time.<br>• AI Summarization: Condenses multiple sources into concise articles.<br>• Audio Delivery: Converts news to natural, podcast-style audio.<br>• Full Access: Links to complete articles for in-depth reading.</p>
+                </section>
+
+                <!-- Priorities -->
+                <section class="section-card">
+                    <h2 class="section-title">Priorities</h2>
+                    <p class="description">The MVP is all about reducing screen time by using AI to turn news into short, easy-to-digest podcasts. To avoid any FOMO, it also offers a custom page where users can save articles and podcasts, making it easy to catch up whenever it suits them.</p>
+                    <p class="description">Trust is at the heart of the app, so ensuring accurate AI summaries is a top priority. A report button lets users flag any mistakes, helping keep the content reliable and high-quality.</p>
+                </section>
+
+                <!-- Design -->
+                <section class="section-card">
+                    <h2 class="section-title">Design</h2>
+                    <p class="description">The design of the app will prioritize ease of use and accessibility for all types of users. With a focus on simplicity and intuitiveness, the interface will ensure that users, regardless of their technical experience or background, can effortlessly navigate the app.</p>
+                    <img src="Assets/Nuvix/rrSwOstVvDerW1f7DQHOm9eIRU.png.webp" alt="Nuvix Design" class="section-image-inline">
+                </section>
+
+                <!-- Podcast Interface Design -->
+                <section class="section-card">
+                    <img src="Assets/Nuvix/rBbwl7CRAs9JfYkbzrZ3BUTkbEU.png.webp" alt="Nuvix Podcast Interface" class="section-image-inline">
+                    <h2 class="section-title">Podcast Interface Design</h2>
+                    <p class="description">• Card Design: Each episode will be presented in a card layout, displaying the title, date, and relevant tags for easy identification.<br>• "Skip News" Button: Allows users to bypass specific topics, creating a personalized listening experience.<br>• Intuitive Navigation: A simple design that makes it easy for users to find and access the content that interests them most.</p>
+                </section>
+
+                <!-- Now Playing Page Design -->
+                <section class="section-card">
+                    <h2 class="section-title">Now Playing Page Design</h2>
+                    <p class="description">• Clickable Source: Access the full article directly within the app.<br>• Media Controls: Easy-to-use buttons for pausing, skipping, or adjusting playback.<br>• Speed Control: Adjust playback speed to suit personal preferences.<br>• Sleep Timer: Set a time for the podcast to automatically stop.</p>
+                    <img src="Assets/Nuvix/JXuSA0Z0BEBCGc7pouvTS3qYfU.png.webp" alt="Nuvix Now Playing" class="section-image-inline">
+                </section>
+
+                <!-- Saved for Later Section -->
+                <section class="section-card">
+                    <img src="Assets/Nuvix/bmtpzqquyHIdSEx7upEfNvjFc8.png.webp" alt="Nuvix Saved" class="section-image-inline">
+                    <h2 class="section-title">Saved for Later Section</h2>
+                    <p class="description">• Content Organization: Distinguishes between saved articles and podcasts.<br>• Filter & Search Options: Browse by topics, dates, or tags for efficient content discovery.<br>• Streamlined Access: Quickly revisit saved content as your library grows.</p>
+                </section>
+
+                <!-- Discovery Page Design -->
+                <section class="section-card">
+                    <h2 class="section-title">Discovery Page Design</h2>
+                    <p class="description">• Search Bar: Easily find topics, articles, and podcasts of interest.<br>• Unfollowed Topics: Curated list of topics to explore new areas of interest.<br>• Top Global News: Highlighting trending stories with filter options by specific topics.</p>
+                    <img src="Assets/Nuvix/ux7TNpN9zYJE5lyM5Euy5sqJXcs.png.webp" alt="Nuvix Discovery" class="section-image-inline">
+                </section>
+
+                <!-- Settings Page Design -->
+                <section class="section-card">
+                    <h2 class="section-title">Settings Page Design</h2>
+                    <p class="description">The Settings page offers a customizable interface to enhance user comfort and accessibility, including features like Night Mode, adjustable text size, and premium options such as different voices, custom app icons, themes, unlimited following topics, and a homescreen widget player.</p>
+                </section>
+
+                <!-- Key Performance Indicators -->
+                <section class="section-card">
+                    <h2 class="section-title">Key Performance Indicators</h2>
+                    <p class="description"><strong>Increase User Base</strong><br>• Number of Downloads<br>• Conversion Rate (from app store visits to downloads)<br>• Cost Per Acquisition</p>
+                    <p class="description"><strong>Boost Engagement and Retention</strong><br>• Daily Active Users / Monthly Active Users<br>• Session Duration<br>• Retention Rate (7-day, 30-day)</p>
+                    <p class="description"><strong>Ensure App Quality and User Satisfaction</strong><br>• Crash-Free Sessions Percentage<br>• Net Promoter Score<br>• User Ratings and Reviews</p>
+                    <p class="description"><strong>Monetization</strong><br>• Subscription Conversion Rate<br>• Average Revenue Per User<br>• Churn Rate</p>
+                </section>
+
+                <div class="project-header">
+                    <button class="back-btn" onclick="closeProject()"><span class="btn-text-desktop">Close</span><span class="btn-text-mobile">Back</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- League of Legends Project Page -->
+        <div class="page page-project" id="lol-page">
+            <div class="container">
+                <div class="project-header">
+                    <button class="back-btn" onclick="closeProject()"><span class="btn-text-desktop">Close</span><span class="btn-text-mobile">Back</span></button>
+                    <a href="https://merch.riotgames.com/en-gb/product/mobyfox-jinx-graffiti-apple/" target="_blank" class="appstore-btn appstore-btn-riot"><img src="Assets/riotgames.svg" alt="Riot Games" class="riot-logo">Visit Riot Games Store</a>
+                </div>
+
+                <!-- Banner -->
+                <img src="Assets/League of Legends/2ZM6pBsojZjt9YnF3JB3HlS6EQ.png.webp" alt="League of Legends Banner" class="project-banner">
+
+                <!-- Context -->
+                <section class="section-card">
+                    <h2 class="section-title">Context</h2>
+                    <p class="description">MobyFox partnered with Riot Games to develop a range of physical and digital products for Apple Watch. This collaboration included launching a campaign featured within the League of Legends client and on the official website, ensuring broad visibility and engagement with the target audience.</p>
+                    <img src="Assets/League of Legends/Ga5hVVukYLiHTrbdwxe3Btsps.png.webp" alt="League of Legends Partnership" class="section-image-inline">
+                    <img src="Assets/League of Legends/9M8OmSlQkkAUTqBOGXDFnJ93twQ.png.webp" alt="League of Legends Products" class="section-image-inline">
+                </section>
+
+                <!-- Users -->
+                <section class="section-card">
+                    <h2 class="section-title">Users</h2>
+                    <p class="description">Our user base primarily consisted of gamers, including both active and former players. The design strategy was tailored to resonate with competitive players as well as enthusiasts of game lore. By achieving this key alignment, we enhanced user satisfaction and delivered value to both the licensor and the business.</p>
+                </section>
+
+                <!-- Product Design -->
+                <section class="section-card">
+                    <h2 class="section-title">Product Design</h2>
+                    <p class="description">Worked in close collaboration with the design team to conceptualize and develop premium watch bands, ensuring a harmonious blend of style and functionality. Additionally, designed elegant packaging that enhances the product's overall presentation. This collaborative approach ensured the creation of a cohesive, market-ready offering that balances aesthetic sophistication with practical excellence.</p>
+                    <img src="Assets/League of Legends/Mzl0LbfHLTrV4BNZ1TdT7Qbp3k.png.webp" alt="Watch Bands Design" class="section-image-inline">
+                    <img src="Assets/League of Legends/7W8Hqzo4brxZYYLdZyO70IPqE0.png.webp" alt="Product Design" class="section-image-inline">
+                    <img src="Assets/League of Legends/NdzOiOS5tdEUQIrXNEjwJ0K01co.png.webp" alt="Packaging Design" class="section-image-inline">
+                </section>
+
+                <!-- Digital Product Design -->
+                <section class="section-card">
+                    <h2 class="section-title">Digital Product Design</h2>
+                    <p class="description">Developed a collection of over 150 meticulously designed digital watch faces to complement the aesthetic appeal of the watch bands. This comprehensive approach provided a diverse and engaging array of options, enhancing both the user experience and the overall product offering.</p>
+                    <img src="Assets/League of Legends/k40P1ctDKSMsadtkkrjYnevIRw.png.webp" alt="Digital Watch Faces" class="section-image-inline">
+                </section>
+
+                <!-- Marketing Campaign -->
+                <section class="section-card">
+                    <h2 class="section-title">Marketing Campaign</h2>
+                    <p class="description">Produced over 100 assets customized for various platforms, including advertisements, social media, and web campaigns. These assets were optimized for Meta Ads, Twitter, and YouTube, ensuring a cohesive and impactful presence across diverse digital channels.</p>
+                    <div class="image-grid-staggered">
+                        <img src="Assets/League of Legends/lGr5Jw4Rb2kcqEtE9z15F2WLSp8.png.webp" alt="Marketing Asset 1">
+                        <img src="Assets/League of Legends/TIkwXv4ymUX8MvW33gnP05UdwU.png.webp" alt="Marketing Asset 2">
+                        <img src="Assets/League of Legends/0kbUTH2yTuepjR0qmoJ0XjUUDwE.png.webp" alt="Marketing Asset 3">
+                    </div>
+                </section>
+
+                <!-- Campaign Results -->
+                <section class="section-card">
+                    <h2 class="section-title">Campaign Results</h2>
+                    <p class="description">Achieved a record-setting product launch in the European market. Further solidifying our market presence, Riot Games supported our efforts by featuring our products on their official website and in the in-game client launcher. This collaboration marks a significant milestone in our strategic partnership and highlights the growing recognition of our brand within the gaming industry.</p>
+                    <img src="Assets/League of Legends/dUolaKp0NC4U6Twd2ANVlyvlsX4.png.webp" alt="Campaign Results" class="section-image-inline">
+                    <img src="Assets/League of Legends/FFnifiqVPy2qO45cpvO2ShbCGk.png.webp" alt="Riot Games Feature" class="section-image-inline">
+                </section>
+
+                <div class="project-header">
+                    <button class="back-btn" onclick="closeProject()"><span class="btn-text-desktop">Close</span><span class="btn-text-mobile">Back</span></button>
+                    <a href="https://merch.riotgames.com/en-gb/product/mobyfox-jinx-graffiti-apple/" target="_blank" class="appstore-btn appstore-btn-riot"><img src="Assets/riotgames.svg" alt="Riot Games" class="riot-logo">Visit Riot Games Store</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

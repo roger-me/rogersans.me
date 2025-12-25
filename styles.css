@@ -569,6 +569,11 @@ footer p {
     margin-bottom: 16px;
 }
 
+.section-card + .project-header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
 .back-btn {
     display: flex;
     align-items: center;

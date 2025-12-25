@@ -37,12 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             try {
-                const response = await fetch(form.action, {
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    body: new FormData(form),
                     headers: {
+                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
-                    }
+                    },
+                    body: JSON.stringify({
+                        access_key: '45303619-810e-47a7-b3c5-6de49193da18',
+                        subject: 'New message from portfolio',
+                        name: name,
+                        email: email,
+                        message: message
+                    })
                 });
 
                 const data = await response.json();

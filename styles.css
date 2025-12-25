@@ -883,7 +883,7 @@ footer p {
         top: 60px !important;
         left: 16px !important;
         right: 16px !important;
-        bottom: 160px !important;
+        bottom: 100px !important;
         width: calc(100% - 32px) !important;
         height: auto !important;
         z-index: 100;

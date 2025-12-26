@@ -698,6 +698,7 @@ footer p {
     font-size: 16px;
     padding: 0 20px;
     border-radius: 100px;
+    text-decoration: none;
 }
 
 .btn-text-mobile {

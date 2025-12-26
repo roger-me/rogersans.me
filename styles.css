@@ -751,7 +751,10 @@ footer p {
 
 .apple-logo {
     height: 16px;
-    width: auto;
+    width: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    object-fit: contain;
     filter: brightness(0) invert(1);
 }
 
@@ -785,7 +788,10 @@ footer p {
 
 .riot-logo {
     height: 16px;
-    width: auto;
+    width: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    object-fit: contain;
     filter: brightness(0) invert(1);
 }
 

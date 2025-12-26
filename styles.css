@@ -892,21 +892,18 @@ footer p {
 
     .page-project {
         position: static !important;
+        display: none !important;
         width: 100% !important;
         height: auto !important;
-        max-height: 0 !important;
-        opacity: 0 !important;
-        overflow: hidden !important;
         padding: 0 !important;
         background: var(--bg);
-        transition: max-height 0.4s ease, opacity 0.3s ease;
+        opacity: 1 !important;
+        overflow: visible !important;
     }
 
     .page-project.active {
-        max-height: 50000px !important;
-        opacity: 1 !important;
-        overflow: visible !important;
-        padding-top: 24px !important;
+        display: block !important;
+        padding: 24px 0 !important;
         border-top: 1px solid var(--card-bg);
         margin-top: 16px;
     }

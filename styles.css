@@ -890,23 +890,22 @@ footer p {
         transform: none !important;
     }
 
-    .page-project,
-    .page-project.active {
+    .page-project {
         position: static !important;
         width: 100% !important;
         height: auto !important;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
+        max-height: 0 !important;
+        opacity: 0 !important;
+        overflow: hidden !important;
         padding: 0 !important;
         background: var(--bg);
         transition: max-height 0.4s ease, opacity 0.3s ease;
     }
 
     .page-project.active {
-        max-height: none !important;
+        max-height: 50000px !important;
         opacity: 1 !important;
-        overflow: visible;
+        overflow: visible !important;
         padding-top: 24px !important;
         border-top: 1px solid var(--card-bg);
         margin-top: 16px;

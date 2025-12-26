@@ -88,6 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     projectLinks.forEach(link => {
         link.addEventListener('click', (e) => {
+            // On mobile (< 900px), let the link work normally
+            if (window.innerWidth <= 900) {
+                return; // Don't prevent default, go to the page
+            }
             e.preventDefault();
             const projectId = link.dataset.project;
             openProject(projectId);

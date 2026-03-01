@@ -445,7 +445,7 @@ body {
 .project-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin: 0 -16px;
 }
@@ -538,6 +538,47 @@ body {
     color: var(--text);
     border-radius: 18px;
     transition: all 0.2s ease;
+}
+
+.experience-link.active {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.experience-link.active .experience-logo {
+    filter: brightness(0) invert(1);
+}
+
+.experience-link.active .experience-name,
+.experience-link.active .experience-role,
+.experience-link.active .experience-date {
+    color: var(--bg);
+}
+
+[data-theme="dark"] .experience-link.active .experience-logo,
+[data-theme="nord"] .experience-link.active .experience-logo,
+[data-theme="dracula"] .experience-link.active .experience-logo,
+[data-theme="cyber"] .experience-link.active .experience-logo {
+    filter: brightness(0);
+}
+
+[data-theme="dark"] .experience-link.active,
+[data-theme="dark"] .experience-link.active .experience-name,
+[data-theme="dark"] .experience-link.active .experience-role,
+[data-theme="dark"] .experience-link.active .experience-date,
+[data-theme="nord"] .experience-link.active,
+[data-theme="nord"] .experience-link.active .experience-name,
+[data-theme="nord"] .experience-link.active .experience-role,
+[data-theme="nord"] .experience-link.active .experience-date,
+[data-theme="dracula"] .experience-link.active,
+[data-theme="dracula"] .experience-link.active .experience-name,
+[data-theme="dracula"] .experience-link.active .experience-role,
+[data-theme="dracula"] .experience-link.active .experience-date,
+[data-theme="cyber"] .experience-link.active,
+[data-theme="cyber"] .experience-link.active .experience-name,
+[data-theme="cyber"] .experience-link.active .experience-role,
+[data-theme="cyber"] .experience-link.active .experience-date {
+    color: var(--bg);
 }
 
 .experience-list li:nth-child(1),

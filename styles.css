@@ -5,53 +5,15 @@
 }
 
 :root {
-    --bg: #fff;
+    --bg: #FFFFFF;
     --text: #000;
     --text-secondary: #666;
     --accent: #000;
-    --card-bg: rgba(0, 0, 0, 0.05);
-    --input-bg: rgba(0, 0, 0, 0.08);
+    --card-bg: #FFFFFF;
+    --card-border: rgba(0, 0, 0, 0.06);
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 20px rgba(0, 0, 0, 0.05);
+    --input-bg: rgba(0, 0, 0, 0.05);
     --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-/* Dark Theme */
-[data-theme="dark"] {
-    --bg: #000;
-    --text: #fff;
-    --text-secondary: #888;
-    --accent: #fff;
-    --card-bg: rgba(255, 255, 255, 0.06);
-    --input-bg: rgba(255, 255, 255, 0.12);
-}
-
-/* Nord Theme */
-[data-theme="nord"] {
-    --bg: #2E3440;
-    --text: #ECEFF4;
-    --text-secondary: #81A1C1;
-    --accent: #88C0D0;
-    --card-bg: rgba(59, 66, 82, 0.8);
-    --input-bg: rgba(67, 76, 94, 0.8);
-}
-
-/* Dracula Theme */
-[data-theme="dracula"] {
-    --bg: #282A36;
-    --text: #F8F8F2;
-    --text-secondary: #9fa8c7;
-    --accent: #BD93F9;
-    --card-bg: rgba(68, 71, 90, 0.6);
-    --input-bg: rgba(68, 71, 90, 0.8);
-}
-
-/* Cyber Theme */
-[data-theme="cyber"] {
-    --bg: #0f1219;
-    --text: #fff;
-    --text-secondary: #5FBDBA;
-    --accent: #FFE135;
-    --card-bg: rgba(30, 40, 55, 0.8);
-    --input-bg: rgba(95, 189, 186, 0.15);
 }
 
 html {
@@ -173,127 +135,11 @@ body {
     filter: invert(37%) sepia(98%) saturate(1561%) hue-rotate(183deg) brightness(93%) contrast(96%);
 }
 
-[data-theme="dark"] .linkedin-icon,
-[data-theme="nord"] .linkedin-icon,
-[data-theme="dracula"] .linkedin-icon,
-[data-theme="cyber"] .linkedin-icon {
-    filter: brightness(0) invert(1);
-}
-
-/* Theme Switcher */
-.theme-switcher {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    align-self: flex-end;
-    margin-bottom: 2px;
-}
-
-.theme-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.theme-btn:hover {
-    transform: scale(1.15);
-}
-
-.theme-icon {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0);
-    transition: filter 0.2s ease;
-}
-
-[data-theme="dark"] .theme-icon,
-[data-theme="nord"] .theme-icon,
-[data-theme="dracula"] .theme-icon,
-[data-theme="cyber"] .theme-icon {
-    filter: brightness(0) invert(1);
-}
-
-.theme-menu {
-    position: absolute;
-    top: calc(100% + 12px);
-    right: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
-    backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
-    border-radius: 24px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    z-index: 1000;
-    min-width: 140px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-}
-
-.theme-option {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    background: none;
-    border: none;
-    border-radius: 16px;
-    color: #fff;
-    font-family: var(--font);
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    text-align: left;
-}
-
-.theme-option:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.theme-option.active {
-    background: var(--text-secondary);
-}
-
-/* Light theme menu styles */
-:root:not([data-theme]) .theme-option {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-:root:not([data-theme]) .theme-option:hover {
-    background: rgba(0, 0, 0, 0.08);
-}
-
-:root:not([data-theme]) .theme-option.active {
-    background: var(--text-secondary);
-    color: #fff;
-}
-
-.theme-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.theme-color {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
 /* Section Cards */
 .section-card {
     background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
     border-radius: 24px;
     padding: 24px;
     margin-bottom: 16px;
@@ -351,26 +197,11 @@ body {
     transition: filter 0.2s ease;
 }
 
-[data-theme="dark"] .ai-tool-logo,
-[data-theme="nord"] .ai-tool-logo,
-[data-theme="dracula"] .ai-tool-logo,
-[data-theme="cyber"] .ai-tool-logo {
-    filter: brightness(0) invert(1);
-}
 
 .ai-tool:hover .ai-tool-logo {
     filter: brightness(0) invert(1);
 }
 
-[data-theme="dark"] .ai-tool:hover .ai-tool-logo {
-    filter: brightness(0);
-}
-
-[data-theme="nord"] .ai-tool:hover .ai-tool-logo,
-[data-theme="dracula"] .ai-tool:hover .ai-tool-logo,
-[data-theme="cyber"] .ai-tool:hover .ai-tool-logo {
-    filter: brightness(0);
-}
 
 /* Inline Section Image */
 .section-image-inline {
@@ -445,7 +276,7 @@ body {
 .project-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 8px;
     margin: 0 -16px;
 }
@@ -454,72 +285,89 @@ body {
     margin: 0;
 }
 
-
-.project-list a {
+.project-card {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    font-size: 16px;
-    color: var(--text);
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
     text-decoration: none;
-    border-radius: 100px;
+    color: var(--text);
+    border-radius: 18px;
     transition: all 0.2s ease;
 }
 
-@media (max-width: 900px) {
-    .project-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 400px) {
-    .project-list {
-        grid-template-columns: 1fr;
-    }
-}
-
 .project-logo {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 2px;
     filter: brightness(0);
     transition: filter 0.2s ease;
 }
 
-[data-theme="dark"] .project-logo,
-[data-theme="nord"] .project-logo,
-[data-theme="dracula"] .project-logo,
-[data-theme="cyber"] .project-logo {
-    filter: brightness(0) invert(1);
+.project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.project-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.project-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.project-year {
+    font-size: 13px;
+    color: var(--text-secondary);
+    background: var(--input-bg);
+    padding: 2px 10px;
+    border-radius: 100px;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.project-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
 }
 
 /* Project hover colors */
-.project-list li a:hover,
-.project-list li a.active {
+.project-card:hover,
+.project-card.active {
     background: var(--accent);
-    color: var(--bg);
-    padding-left: 24px;
 }
 
-.project-list a:hover .project-logo,
-.project-list a.active .project-logo {
+.project-card:hover .project-name,
+.project-card:hover .project-desc,
+.project-card.active .project-name,
+.project-card.active .project-desc {
+    color: var(--bg);
+}
+
+.project-card:hover .project-year,
+.project-card.active .project-year {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--bg);
+}
+
+
+.project-card:hover .project-logo,
+.project-card.active .project-logo {
     filter: brightness(0) invert(1);
 }
 
-[data-theme="dark"] .project-list a:hover .project-logo,
-[data-theme="dark"] .project-list a.active .project-logo {
-    filter: brightness(0);
-}
-
-[data-theme="nord"] .project-list a:hover .project-logo,
-[data-theme="nord"] .project-list a.active .project-logo,
-[data-theme="dracula"] .project-list a:hover .project-logo,
-[data-theme="dracula"] .project-list a.active .project-logo,
-[data-theme="cyber"] .project-list a:hover .project-logo,
-[data-theme="cyber"] .project-list a.active .project-logo {
-    filter: brightness(0);
-}
 
 /* Work Experience */
 .experience-list {
@@ -561,31 +409,6 @@ body {
     color: var(--bg);
 }
 
-[data-theme="dark"] .experience-link.active .experience-logo,
-[data-theme="nord"] .experience-link.active .experience-logo,
-[data-theme="dracula"] .experience-link.active .experience-logo,
-[data-theme="cyber"] .experience-link.active .experience-logo {
-    filter: brightness(0);
-}
-
-[data-theme="dark"] .experience-link.active,
-[data-theme="dark"] .experience-link.active .experience-name,
-[data-theme="dark"] .experience-link.active .experience-role,
-[data-theme="dark"] .experience-link.active .experience-date,
-[data-theme="nord"] .experience-link.active,
-[data-theme="nord"] .experience-link.active .experience-name,
-[data-theme="nord"] .experience-link.active .experience-role,
-[data-theme="nord"] .experience-link.active .experience-date,
-[data-theme="dracula"] .experience-link.active,
-[data-theme="dracula"] .experience-link.active .experience-name,
-[data-theme="dracula"] .experience-link.active .experience-role,
-[data-theme="dracula"] .experience-link.active .experience-date,
-[data-theme="cyber"] .experience-link.active,
-[data-theme="cyber"] .experience-link.active .experience-name,
-[data-theme="cyber"] .experience-link.active .experience-role,
-[data-theme="cyber"] .experience-link.active .experience-date {
-    color: var(--bg);
-}
 
 .experience-list li:nth-child(1),
 .experience-list li:nth-child(2) {
@@ -603,13 +426,6 @@ body {
     height: 20px;
     object-fit: contain;
     filter: brightness(0);
-}
-
-[data-theme="dark"] .experience-logo,
-[data-theme="nord"] .experience-logo,
-[data-theme="dracula"] .experience-logo,
-[data-theme="cyber"] .experience-logo {
-    filter: brightness(0) invert(1);
 }
 
 .experience-info {
@@ -653,24 +469,12 @@ body {
     filter: brightness(0) invert(1);
 }
 
-[data-theme="dark"] .experience-link:hover .experience-logo {
-    filter: brightness(0);
-}
-
-[data-theme="nord"] .experience-link:hover .experience-logo,
-[data-theme="dracula"] .experience-link:hover .experience-logo,
-[data-theme="cyber"] .experience-link:hover .experience-logo {
-    filter: brightness(0);
-}
 
 .experience-link:hover .experience-date {
     background: rgba(0, 0, 0, 0.1);
     color: var(--bg);
 }
 
-[data-theme="dark"] .experience-link:hover .experience-date {
-    background: rgba(255, 255, 255, 0.2);
-}
 
 /* Contact */
 .contact-form {
@@ -815,25 +619,6 @@ footer p {
     transform: scale(1.05);
 }
 
-[data-theme="dark"] .back-btn {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .back-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-[data-theme="nord"] .back-btn,
-[data-theme="dracula"] .back-btn,
-[data-theme="cyber"] .back-btn {
-    background: var(--input-bg);
-}
-
-[data-theme="nord"] .back-btn:hover,
-[data-theme="dracula"] .back-btn:hover,
-[data-theme="cyber"] .back-btn:hover {
-    background: var(--card-bg);
-}
 
 .appstore-btn {
     display: flex;
@@ -860,14 +645,6 @@ footer p {
     filter: brightness(0) invert(1);
 }
 
-[data-theme="dark"] .appstore-btn {
-    background: #fff;
-    color: #000;
-}
-
-[data-theme="dark"] .apple-logo {
-    filter: brightness(0);
-}
 
 .appstore-btn:hover {
     opacity: 0.9;
@@ -920,9 +697,12 @@ footer p {
 }
 
 .project-banner {
+    display: block;
     width: 100%;
     border-radius: 24px;
     margin-bottom: 16px;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
 }
 
 .project-image {
@@ -1014,29 +794,6 @@ footer p {
     }
 }
 
-/* Theme-specific link buttons for Nord, Dracula, Cyber */
-[data-theme="nord"] .appstore-btn,
-[data-theme="dracula"] .appstore-btn,
-[data-theme="cyber"] .appstore-btn {
-    background: var(--accent) !important;
-    color: var(--bg) !important;
-}
-
-[data-theme="nord"] .appstore-btn .apple-logo,
-[data-theme="nord"] .appstore-btn .riot-logo,
-[data-theme="dracula"] .appstore-btn .apple-logo,
-[data-theme="dracula"] .appstore-btn .riot-logo,
-[data-theme="cyber"] .appstore-btn .apple-logo,
-[data-theme="cyber"] .appstore-btn .riot-logo {
-    filter: brightness(0) !important;
-}
-
-/* Theme-specific titles use accent color */
-[data-theme="nord"] .section-title,
-[data-theme="dracula"] .section-title,
-[data-theme="cyber"] .section-title {
-    color: var(--accent);
-}
 
 [data-theme] .info p {
     color: var(--text-secondary);

@@ -41,33 +41,6 @@
                         <a href="https://github.com/roger-me" target="_blank" class="linkedin-btn github-btn">
                             <img src="Assets/logos/GitHub_Invertocat_Black.svg" alt="GitHub" class="linkedin-icon">
                         </a>
-                        <div class="theme-switcher">
-                            <button class="theme-btn" onclick="toggleThemeMenu()">
-                                <img src="Assets/logos/Palette.svg" alt="Theme" class="theme-icon">
-                            </button>
-                            <div class="theme-menu" id="themeMenu">
-                                <button class="theme-option" data-theme="light">
-                                    <span class="theme-color" style="background: #fff; border: 1px solid #ddd;"></span>
-                                    Light
-                                </button>
-                                <button class="theme-option" data-theme="dark">
-                                    <span class="theme-color" style="background: #000;"></span>
-                                    Dark
-                                </button>
-                                <button class="theme-option" data-theme="nord">
-                                    <span class="theme-color" style="background: #88C0D0;"></span>
-                                    Nord
-                                </button>
-                                <button class="theme-option" data-theme="dracula">
-                                    <span class="theme-color" style="background: #BD93F9;"></span>
-                                    Dracula
-                                </button>
-                                <button class="theme-option" data-theme="cyber">
-                                    <span class="theme-color" style="background: #FFE135;"></span>
-                                    Cyber
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </header>
 
@@ -81,74 +54,64 @@
                 <section class="section-card">
                     <h2 class="section-title">Projects</h2>
                     <ul class="project-list">
-                        <li><a href="genera.html" data-project="genera"><img src="Assets/genera.svg" alt="Genera logo" class="project-logo">Genera</a></li>
-                        <li><a href="lol.html" data-project="lol"><img src="Assets/League-of-legends-seeklogo@2x.png" alt="League of Legends logo" class="project-logo">League of Legends</a></li>
-                        <li><a href="nuvix.html" data-project="nuvix"><img src="Assets/nuvix.svg" alt="Nuvix logo" class="project-logo">Nuvix</a></li>
-                    </ul>
-                </section>
-
-                <!-- Work Experience -->
-                <section class="section-card">
-                    <h2 class="section-title">Experience</h2>
-                    <ul class="experience-list">
                         <li>
-                            <a href="tiles.html" data-project="tiles" class="experience-link experience-tiles">
-                                <img src="Assets/tiles.svg" alt="Tiles logo" class="experience-logo">
-                                <div class="experience-info">
-                                    <span class="experience-name">Tiles</span>
-                                    <span class="experience-role">Founder</span>
+                            <a href="tiles.html" data-project="tiles" class="project-card">
+                                <img src="Assets/tiles.svg" alt="Tiles logo" class="project-logo">
+                                <div class="project-info">
+                                    <div class="project-heading">
+                                        <span class="project-name">Tiles</span>
+                                        <span class="project-year">2025/26</span>
+                                    </div>
+                                    <span class="project-desc">A location-based iOS app that turns the world into a grid of hexagons to unlock, pin moments, and share discoveries with friends.</span>
                                 </div>
-                                <span class="experience-date">2025/26</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.antler.co" target="_blank" class="experience-link experience-antler">
-                                <img src="Assets/logos/antler logo.svg" alt="Antler logo" class="experience-logo">
-                                <div class="experience-info">
-                                    <span class="experience-name">Antler</span>
-                                    <span class="experience-role">Entrepreneur in Residence</span>
+                            <a href="studio.html" data-project="studio" class="project-card">
+                                <img src="Assets/studio.svg" alt="Studio logo" class="project-logo">
+                                <div class="project-info">
+                                    <div class="project-heading">
+                                        <span class="project-name">Studio</span>
+                                        <span class="project-year">2024/25</span>
+                                    </div>
+                                    <span class="project-desc">A SaaS platform that digitizes tattoo studio operations, cutting consent-signing time from 15 minutes to 2 and reaching 80+ studios.</span>
                                 </div>
-                                <span class="experience-date">2025</span>
                             </a>
                         </li>
                         <li>
-                            <a href="studio.html" data-project="studio" class="experience-link experience-studio">
-                                <img src="Assets/studio.svg" alt="Studio logo" class="experience-logo">
-                                <div class="experience-info">
-                                    <span class="experience-name">Studio</span>
-                                    <span class="experience-role">Product Designer</span>
+                            <a href="genera.html" data-project="genera" class="project-card">
+                                <img src="Assets/genera.svg" alt="Genera logo" class="project-logo">
+                                <div class="project-info">
+                                    <div class="project-heading">
+                                        <span class="project-name">Genera</span>
+                                        <span class="project-year">2025</span>
+                                    </div>
+                                    <span class="project-desc">An AI creative studio for generating images and videos while keeping character identity consistent across every output.</span>
                                 </div>
-                                <span class="experience-date">2024/25</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/_innova_group" target="_blank" class="experience-link experience-innova">
-                                <img src="Assets/logos/Dcropped-IMAGOTIPO-NEGRO@3x-2048x542.png" alt="Innova Group logo" class="experience-logo">
-                                <div class="experience-info">
-                                    <span class="experience-name">Innova Group</span>
-                                    <span class="experience-role">Product / Digital Designer</span>
+                            <a href="nuvix.html" data-project="nuvix" class="project-card">
+                                <img src="Assets/nuvix.svg" alt="Nuvix logo" class="project-logo">
+                                <div class="project-info">
+                                    <div class="project-heading">
+                                        <span class="project-name">Nuvix</span>
+                                        <span class="project-year">2024</span>
+                                    </div>
+                                    <span class="project-desc">An AI-powered news podcast app that condenses trusted sources into personalized daily audio summaries.</span>
                                 </div>
-                                <span class="experience-date">2024</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/mobyfox" target="_blank" class="experience-link experience-mobyfox">
-                                <img src="Assets/logos/LOGO ALT_BLACK.png" alt="MobyFox logo" class="experience-logo">
-                                <div class="experience-info">
-                                    <span class="experience-name">MobyFox</span>
-                                    <span class="experience-role">Product / Digital Designer</span>
+                            <a href="lol.html" data-project="lol" class="project-card">
+                                <img src="Assets/League-of-legends-seeklogo@2x.png" alt="League of Legends logo" class="project-logo">
+                                <div class="project-info">
+                                    <div class="project-heading">
+                                        <span class="project-name">League of Legends</span>
+                                        <span class="project-year">2022</span>
+                                    </div>
+                                    <span class="project-desc">A MobyFox × Riot Games collaboration delivering Apple Watch products and a record-setting European launch campaign.</span>
                                 </div>
-                                <span class="experience-date">2021/23</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://webtvasia.com" target="_blank" class="experience-link experience-webtvasia">
-                                <img src="Assets/logos/Logo-wtva (1).png" alt="WebTVAsia logo" class="experience-logo">
-                                <div class="experience-info">
-                                    <span class="experience-name">WebTVAsia</span>
-                                    <span class="experience-role">Digital Content Creator</span>
-                                </div>
-                                <span class="experience-date">2020/22</span>
                             </a>
                         </li>
                     </ul>

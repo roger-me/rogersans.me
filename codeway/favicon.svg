@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    text {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    @media (prefers-color-scheme: light) {
+      text { fill: #000; }
+    }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #fff; }
+    }
+  </style>
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle">R</text>
+</svg>
